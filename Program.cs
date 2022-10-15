@@ -57,6 +57,146 @@ namespace Семинар3дз
                 Console.Write($"{result}, ");
             }
             */
+        //_______________________________Домашнее задание к 4 семинару_____________________________________
+
+        /*Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+        3, 5 -> 243 (3⁵)
+        2, 4 -> 16 */
+
+        /*
+        Console.WriteLine("Введите число");
+        int a =int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите степень");
+        int b =int.Parse(Console.ReadLine());
+
+        int Deg (int A, int B)
+        {
+            int result=A;
+            for (int i = 1; i < B; i++)
+            {
+                result = result*A;  
+            }
+            return result;
+
+        }
+        Console.WriteLine($"{a}, {b} -> {Deg(a,b)}");
+        */
+
+        /*Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+        452 -> 11
+        82 -> 10
+        9012 -> 12 */
+
+        /*
+        Console.WriteLine("Введите число");
+        string Num = Console.ReadLine();
+
+        int Summa(string A)
+        {
+            int result = 0;
+            int a = int.Parse(A);
+            int i = 0;
+            while (A.Length > i)
+            {
+                result = result + a%10; 
+                a = a / 10; 
+                i = i + 1;              
+            } 
+        return result;
+        }
+
+        Console.WriteLine($"Сумма цифр числа {Num} = {Summa(Num)}");
+
+        */
+
+
+        /*Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+        1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+        6, 1, 33 -> [6, 1, 33]*/
+
+        Console.WriteLine("Введите размер массива");
+        int NumArray = int.Parse(Console.ReadLine()!);
+
+        int[] Array(int size)
+        {
+            int[] array = new int[size];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = new Random().Next(0,10);
+            }
+            return array;
+        }
+
+        int[] res = Array(NumArray);
+        Console.WriteLine($"[{String.Join(", ", res)}]");
+
+
+
+        // ____________________________СЕМИНАР 5_______________________
+        /***Задача 32:** Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+        [-4, -8, 8, 2] -> [4, 8, -8, -2]*/
+
+        //___!!!!!____Внизу пример метода для создания массива
+        /*
+        int[] GetArray(int size, int minValue, int maxValue){
+        int[] res = new int[size];
+        for (int i = 0; i < size; i++)
+        {
+            res[i] = new Random().Next(minValue, maxValue + 1);
+        }
+        return res;
+        }
+        */
+
+        // Задача. Напишите программу меняющую знак каждого элемента массива
+
+        /*
+        int[] array = GetArray(12,-9,9);
+        Console.WriteLine(String.Join(" ", array));
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i] = array[i] * -1;
+        }
+        
+        Console.WriteLine(String.Join(" ", array));
+
+        */
+
+        /* **Задача 33:** Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+        4; массив [6, 7, 19, 345, 3] -> нет
+        3; массив [6, 7, 19, 345, 3] -> да*/
+
+
+        /*
+        int[] array = GetArray(123,1,500);
+        //Console.WriteLine(String.Join(" ", array));
+              
+            int count = 0;
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i]>9 && array[i]<100)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine($"Кол-во повторений {count}");
+            */
+
+
+         
+        
+
+
+
+
+
+
+
+
+
+
+
 
         }
     }
